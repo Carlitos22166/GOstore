@@ -208,51 +208,8 @@
 							<article id="contact">
 								<h3 class="major">Comprar</h3>
 
-								<script type="text/javascript">
-	
-									function validar(){
+								
 
-										var copia = document.getElementById("txtcopia").value;
-										var captcha = document.getElementById("captcha").value;
-												
-										if(copia == captcha){
-											alert("Se envio un mensaje a tu correo");
-											
-										}else{
-											alert("El codigo Ingresado no coincide");
-										}
-									}
-
-									</script>
-
-									<script type="text/javascript">
-					    	<?php
-								function codigo_captcha(){
-								$k="";
-								$paramentros="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-								$maximo=strlen($paramentros)-1;
-								for($i=0; $i<5; $i++){
-								$k.=$paramentros{mt_rand(0,$maximo)};
-								}								
-								return $k;
-								}
-							?>
-				    	</script>
-
-				    	<script type="text/javascript">
-					    	<?php
-								function codigo_captcha(){
-								$k="";
-								$paramentros="1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-								$maximo=strlen($paramentros)-1;
-								for($i=0; $i<5; $i++){
-								$k.=$paramentros{mt_rand(0,$maximo)};
-								}								
-								return $k;
-								}
-							?>
-				    	</script>
-							
 							<form action="correo.php" method="POST">
 						    <div class="row">
 						        <div class="col">
@@ -283,30 +240,12 @@
 						    <div>
 						    	
 						    </div>
-						    <button type="submit" class="btn btn-primary" onclick="validar();">Enviar</button>
+						    <button type="submit" class="btn btn-primary">Enviar</button>
 						</form>
 
 
 								
-						<tr>
-							<td>
-								<p><small><small>Ingresa lo siguiente:</small></small></p>
-								<input type="text" name="txtcopia" id="txtcopia" size="10">
-							</td>
-							<td>
-								<input type="text" name="captcha" id="captcha" value=<?php echo codigo_captcha(); ?> class="captcha" size="6" readonly>
-							</td>
-						</tr>		
-						<tr>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td colspan="2" align="center">						
-							</td>
-						</tr>
-						<div>
-							<p><small><small><small>Captcha</small></small></small></p>
-						</div>
+						
 				
 
 								</article>
