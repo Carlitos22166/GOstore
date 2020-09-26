@@ -1,5 +1,5 @@
 <?php
-$destinatario = 'carlosgbj11@gmail.com';
+$destinatario = 'carlos-ur25@hotmail.com';
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
 $apellidos = $_POST['apellidos'];
