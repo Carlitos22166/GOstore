@@ -6,7 +6,7 @@ $apellidos = $_POST['apellidos'];
 
 
 $header = $nombre . " " . $apellidos . "Gracias por tu preferencia";
-$mensajeCompleto = $mensaje . "\n\nAtentamente: " . $email . "\n" . $telefono;
+$mensajeCompleto = "\n\nAtentamente: " . $destinatario . "\n" ;
 
 mail($destinatario, $asunto, $mensajeCompleto, $header);
 echo "<script> setTimeout(\"location.href='index.html'\", 1000)</script>";
