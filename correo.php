@@ -17,5 +17,5 @@ $asunto = 'Compra GO Store';
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
 
-header("Location:index.html");
+header("location.href=index.html");
 ?>
