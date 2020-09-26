@@ -1,21 +1,13 @@
 <?php
+$destinatario = 'carlosgbj11@gmail.com';
 $nombre = $_POST['nombre'];
-$mail = $_POST['email'];
-$empresa = $_POST['mensaje'];
+$email = $_POST['email'];
+$apellidos = $_POST['apellidos'];
 
-$header = 'From: GO Store'  . " \r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
 
-$mensaje = "Muchas gracias por tu preferencia " . $nombre . ",\r\n";
-$mensaje .= "Tu compra se está procesando " . $_POST['mensaje'] . " \r\n";
-$mensaje .= "Enviado el " . date('d/m/Y', time());
+$header = $nombre . " " . $apellidos . "Gracias por tu preferencia";
+$mensajeCompleto = $mensaje . "\n\nAtentamente: " . $email . "\n" . $telefono;
 
-$para = $mail;
-$asunto = 'Compra GO Store';
-
-mail($para, $asunto, utf8_decode($mensaje), $header);
-
-header("Location:index.html");
+mail($destinatario, $asunto, $mensajeCompleto, $header);
+echo "<script> setTimeout(\"location.href='index.php'\", 1000)</script>";
 ?>
