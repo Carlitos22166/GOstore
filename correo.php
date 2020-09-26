@@ -9,5 +9,5 @@ $header = $nombre . " " . $apellidos . "Gracias por tu preferencia";
 $mensajeCompleto = $mensaje . "\n\nAtentamente: " . $email . "\n" . $telefono;
 
 mail($destinatario, $asunto, $mensajeCompleto, $header);
-echo "<script> setTimeout(\"location.href='index.php'\", 1000)</script>";
+echo "<script> setTimeout(\"location.href='index.html'\", 1000)</script>";
 ?>
